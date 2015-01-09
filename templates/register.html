@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> KronosAuth </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Loading Bootstrap -->
+    <link href="{% static "css/vendor/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="{% static "css/flat-ui.css" %}" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link href="{% static "css/style-registration.css" %}" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{% static "js/vendor/jquery.cookie.js" %}"></script>
+
+</head>
+<body>
+<div class="login-form">
+    <div id="alert-field"><p id="welcome-label" class="welcome-label">Register for an account here.</p></div>
+    <div class="alert alert-info"><small>Spaces will be removed from your username!</small></div>
+    <div class="username-field">
+        <input type="text" class="form-control login-field" value placeholder="Username" id="username">
+    </div>
+    <div class="password-field">
+        <input type="password" class="form-control login-field" value placeholder="Password" id="password">
+    </div>
+    <div class="buttons">
+        <button id="registerBtn" type="submit" class="btn btn-success register-button" onclick="register()">Register!
+        </button>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="{% static "js/Authenticator.js" %}"></script>
+
+</html>

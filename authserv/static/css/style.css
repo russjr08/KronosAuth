@@ -1,0 +1,45 @@
+body {
+  background-color: #1abc9c;
+
+}
+
+.login-form {
+    width: 372px;
+    text-align: center;
+    display:inline-block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.welcome-text {
+}
+
+.username-field {
+  padding: 10px;
+}
+
+.password-field {
+  padding: 10px;
+}
+
+.submit-button {
+  /* padding: 20px; */
+  width: 306px;
+  height: 55px;
+  margin-top: 5px;
+}
+
+.register-button {
+  width: 306px;
+  height: 55px;
+  margin-top: 5px;
+}
+
+.logout-button {
+    width: 306px;
+    height: 55px;
+    margin-top: 5px;
+}

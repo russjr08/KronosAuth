@@ -1,0 +1,31 @@
+body {
+    background-color: #1abc9c;
+
+}
+
+.login-form {
+    width: 300px;
+    text-align: center;
+    display:inline-block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.welcome-label {
+}
+
+.username-field {
+    padding: 10px;
+}
+
+.password-field {
+    padding: 10px;
+}
+
+.register-button {
+    width: 234px;
+    padding: 20px;
+}

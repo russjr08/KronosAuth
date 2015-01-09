@@ -1,0 +1,55 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title> KronosAuth </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Loading Bootstrap -->
+    <link href="{% static "css/vendor/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="{% static "css/flat-ui.css" %}" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{% static "js/vendor/jquery.cookie.js" %}"></script>
+
+  </head>
+  <body>
+    <div class="login-form">
+      <div id="alert-field" class="alert">
+        <p id="welcome-label" class="welcome-text">Single Sign-On for KronosAD</p>
+      </div>
+      <div id="referrer-alert">
+          <small id="referrer-label"></small>
+      </div>
+      <div class="username-field">
+        <input type="text" class="form-control login-field" value placeholder="Username" id="username">
+      </div>
+      <div class="password-field">
+        <input type="password" class="form-control login-field" value placeholder="Password" id="password">
+      </div>
+      <div class="buttons">
+        <button id="loginBtn" type="submit" class="btn btn-success submit-button" onclick="login()">Login!</button> <br/>
+        <button id="registerBtn" class="btn btn-info register-button" onclick="window.location={% url "register" %} ">Register</button> <br/>
+        <button id="logoutBtn" class="btn btn-danger logout-button" onclick="logout()">Logout!</button> <br/>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="{% static "js/Authenticator.js" %}"></script>
+  <script type="text/javascript">
+    $("#password").keypress(function(event) {
+
+        if(document.referrer && event.which == 13) {
+            
+            login(); 
+        
+        }
+
+    });
+  </script>
+</html>
